@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ddb0118813.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>@Uyanda.dev</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/uyanda-logo.png" alt="uyanda-logo" class="logo">
+                <ul id="side-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>LAWYER</p>
+                <h1><span>Velela</span> VA INC<br> from Mthatha Eastern Cape</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------- About ---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/user-1.png" alt="user image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I'm Uyanda, founder and CTO of @Uyanda.dev. I'm passionate about building scalable, user-focused software solutions that solve real-world problems. With a strong background in full-stack development, I specialize in creating dynamic web applications using modern technologies such as HTML, CSS, JavaScript, and various frameworks. My goal is to deliver high-quality products that exceed client expectations and drive business growth. When I'm not coding, I enjoy exploring new tech trends and contributing to open-source projects. Let's connect and create something amazing together!
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>@Uyanda.dev 2023 - current</span><br>Founder & CTO</li>
+                            <li><span>Dotcom Solutions 2021 – 2022</span><br>Lead Software Engineer | Technician | Network Administrator</li>
+                            <li><span>InnovateHub 2020 – 2021</span><br>Full-Stack Developer (Startup)</li>
+                            <li><span>CodeSpark Solutions 2017 – 2018</span><br>Junior Web Developer (Freelance/Part-time)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>100Devs</li>
+                            <li><span>2018</span><br>Harvard's CS50 program</li>
+                            <li><span>2021 - 2023</span><br>Richfield Graduate Institute of Technology</li>
+                            <li><span>2024 - current</span><br>University of Johannessburg</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------- Services ---------- -->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Our Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        We create modern, responsive, and user-friendly websites tailored to your brand and business goals. Our web design services focus on clean aesthetics, intuitive navigation, and seamless performance across all devices. From personal portfolios to corporate sites and e-commerce platforms, we ensure every design combines creativity with functionality to deliver an engaging online presence.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>
+                        We design intuitive and engaging user experiences that put people first. Our UI/UX services focus on creating clean interfaces, smooth interactions, and accessible designs that make your product easy to use and visually appealing. From wireframes and prototypes to final polished designs, we ensure every detail enhances usability while reflecting your brand identity.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>
+                        We craft sleek and functional app designs that deliver seamless user experiences across iOS and Android. Our approach combines modern aesthetics with practical usability, ensuring apps are visually appealing, easy to navigate, and aligned with your business goals. From concept sketches to interactive prototypes, we design apps that engage users and keep them coming back.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- ---------- Portfolio ---------- -->
+    
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Our Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/download.jpg" alt="workspace">
+                    <div class="layer">
+                        <h3>Company Website</h3>
+                        <p>This website connects you with the company for service delivery.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/work-1.png" alt="workspace">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>This app connects you with many clients in need of your services.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/download.jpg" alt="workspace">
+                    <div class="layer">
+                        <h3>Company Website</h3>
+                        <p>This website connects you with the company for service delivery.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+     </div>
+
+    <!-- ---------- Contact ---------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact us</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> masetibabalo2@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +2771 558 4048</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <a href="resume/babalo-uyanda-maseti.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form id="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" row="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2024 @Uyanda.dev. All rights reserved.</p>
+        </div>
+     </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
