@@ -6,12 +6,15 @@
 <body>
   <h2>Listening for new form submissions...</h2>
   <script>
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxx22GlsmdxcQqp-Yr8Mr9sT5eiocFN3E4kfHy94RbkIm_5Wlo0cVjJ02Ip7NYbT6boOA/exec"; // your URL
+    // Your deployed Google Apps Script Web App URL
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxx22GlsmdxcQqp-Yr8Mr9sT5eiocFN3E4kfHy94RbkIm_5Wlo0cVjJ02Ip7NYbT6boOA/exec";
 
     async function checkForUpdates() {
       try {
+        // Call Apps Script to get the latest notification
         const response = await fetch(WEB_APP_URL + "?mode=getNotification");
         const message = await response.text();
+
         if (message && message !== window.lastMessage) {
           window.lastMessage = message;
           new Notification("Client Form Alert", { body: message });
@@ -25,12 +28,13 @@
       const permission = await Notification.requestPermission();
       if (permission === "granted") {
         console.log("Notifications enabled!");
-        setInterval(checkForUpdates, 5000); // check every 5 seconds
+        setInterval(checkForUpdates, 5000); // check every 5s
       } else {
         alert("Please allow notifications in your browser settings.");
       }
     }
 
+    // Ask user permission immediately
     requestPermission();
   </script>
 </body>
