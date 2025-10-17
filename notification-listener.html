@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submission Alerts</title>
+</head>
+<body>
+  <h2>Listening for new form submissions...</h2>
+  <script>
+    async function checkForUpdates() {
+      const response = await fetch("YOUR_WEB_APP_URL?function=getNotification");
+      const message = await response.text();
+      if (message && message !== window.lastMessage) {
+        window.lastMessage = message;
+        new Notification("Client Form Alert", { body: message });
+      }
+    }
+
+    async function requestPermission() {
+      const perm = await Notification.requestPermission();
+      if (perm === "granted") {
+        setInterval(checkForUpdates, 10000); // check every 10s
+      } else {
+        alert("Notifications blocked — please allow them!");
+      }
+    }
+
+    requestPermission();
+  </script>
+</body>
+</html>
