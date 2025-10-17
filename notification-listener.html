@@ -7,7 +7,7 @@
   <h2>Listening for new form submissions...</h2>
   <script>
     async function checkForUpdates() {
-      const response = await fetch("YOUR_WEB_APP_URL?function=getNotification");
+      const response = await fetch("https://script.google.com/macros/s/AKfycbxx22GlsmdxcQqp-Yr8Mr9sT5eiocFN3E4kfHy94RbkIm_5Wlo0cVjJ02Ip7NYbT6boOA/exec?function=getNotification");
       const message = await response.text();
       if (message && message !== window.lastMessage) {
         window.lastMessage = message;
