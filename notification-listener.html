@@ -6,21 +6,28 @@
 <body>
   <h2>Listening for new form submissions...</h2>
   <script>
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzXYZ123/exec"; // your URL
+
     async function checkForUpdates() {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbxx22GlsmdxcQqp-Yr8Mr9sT5eiocFN3E4kfHy94RbkIm_5Wlo0cVjJ02Ip7NYbT6boOA/exec?function=getNotification");
-      const message = await response.text();
-      if (message && message !== window.lastMessage) {
-        window.lastMessage = message;
-        new Notification("Client Form Alert", { body: message });
+      try {
+        const response = await fetch(WEB_APP_URL + "?mode=getNotification");
+        const message = await response.text();
+        if (message && message !== window.lastMessage) {
+          window.lastMessage = message;
+          new Notification("Client Form Alert", { body: message });
+        }
+      } catch (err) {
+        console.error("Error fetching notification:", err);
       }
     }
 
     async function requestPermission() {
-      const perm = await Notification.requestPermission();
-      if (perm === "granted") {
-        setInterval(checkForUpdates, 10000); // check every 10s
+      const permission = await Notification.requestPermission();
+      if (permission === "granted") {
+        console.log("Notifications enabled!");
+        setInterval(checkForUpdates, 5000); // check every 5 seconds
       } else {
-        alert("Notifications blocked — please allow them!");
+        alert("Please allow notifications in your browser settings.");
       }
     }
 
